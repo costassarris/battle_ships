@@ -50,5 +50,9 @@ class Board
 		coords
 	end
 
+	def fire(marker)
+		marker.location
+	end
+
 
 end
