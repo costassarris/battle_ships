@@ -23,7 +23,7 @@ describe Ship do
 
 
   it 'knows when it is hit' do
-    ship.hit
+    ship.hit!
     expect(ship.hits).to eq 1
   end
 
@@ -34,8 +34,9 @@ describe Ship do
 
 
   it 'should know when it is sunk' do
-    ship = Ship.new(1)
-    ship.hit
+    ship = Ship.new(2)
+    ship.hit!
+    ship.hit!
     expect(ship).to be_sunk
   end
 

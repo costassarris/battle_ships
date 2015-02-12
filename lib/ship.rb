@@ -1,11 +1,11 @@
 class Ship
 
-	attr_reader :length, :hit
+	attr_reader :length
 
 
 	def initialize(length = 2)
     @length = length
-    @hit = 0
+    @hits = 0
 	end
 
 
@@ -24,8 +24,12 @@ class Ship
   end
 
 
+  def hit!
+    @hits+=1
+  end
+
   def hits
-  	hit =+ 1
+  	@hits
   end
 
 
