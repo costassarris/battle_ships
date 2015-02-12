@@ -26,12 +26,12 @@ class Board
 
 
 	def place_south(ship, coord)
-		coords << coord.join(', ')
+		coords << coord.join('')
 		(ship.length-1).times do
-		coord1 = coords[-1].scan(/\d+|\w/)[0]	
+		coord1 = coords[-1].scan(/\d+|\w/)[0]
 		coord2 = coords[-1].scan(/\d+|\w/)[1].next
-		raise "Can't be placed outside board" if coord1 > ('J')
-		raise "Can't be placed outside board" if coord2.to_i > 10
+		raise "Can't be placed outside board" if coord1 == ('K')
+		raise "Can't be placed outside board" if coord2 == ('11')
 		coords << coord1+coord2
 		end
 		coords
@@ -43,8 +43,8 @@ class Board
 		(ship.length-1).times do											#loop that incriments only the letter
 		coord1 = coords[-1].scan(/\d+|\w/)[0].next		#incriments letter from last item in array
 		coord2 = coords[-1].scan(/\d+|\w/)[1]					#keeps number from last item in array
-		raise "Can't be placed outside board" if coord1 > ('J')
-		raise "Can't be placed outside board" if coord2.to_i > (10)
+		raise "Can't be placed outside board" if coord1 == ('K')
+		raise "Can't be placed outside board" if coord2 == ('11')
 		coords << coord1+coord2												#adds coordinate to array
 		end
 		coords
