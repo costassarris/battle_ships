@@ -45,11 +45,7 @@ describe Board do
 
 
 	it 'raise an error when a ship is placed outside of the board (south)' do
-<<<<<<< HEAD
-		expect{ board.place_south(ship3,['A10'])}.to raise_error("Can't be placed outside board")
-=======
 		expect{ board.place_south(ship3,['A9'])}.to raise_error("Can't be placed outside board")
->>>>>>> 8eccf2c02b2a9839c273882da2bb2eb4a388ed45
 	end
 
 
